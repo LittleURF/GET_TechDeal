@@ -10,6 +10,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using GET_TechDeal.Infrastructure.Data;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using GET_TechDeal.Core.Services;
+using GET_TechDeal.Infrastructure.WebParsers;
+using GET_TechDeal.Core.Interfaces;
 
 namespace GET_TechDeal
 {
@@ -26,6 +32,20 @@ namespace GET_TechDeal
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(Configuration.GetValue<string>("SmallTalksSqlServerAdminConnString")));
+            services.AddSingleton<IXkomWebRepository, XkomWebRepository>();
+            services.AddSingleton<IDealsRepository, DealsRepository>();
+            services.AddSingleton<IProductRepository, ProductRepository>();
+            services.AddSingleton<XkomService>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +55,8 @@ namespace GET_TechDeal
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
 
@@ -46,6 +68,7 @@ namespace GET_TechDeal
             {
                 endpoints.MapControllers();
             });
+            //new XkomWebParser();
         }
     }
 }
