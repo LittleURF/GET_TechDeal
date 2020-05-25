@@ -19,6 +19,11 @@ namespace GET_TechDeal.Core.Services
             _xkomWebRepository = xkomWebRepository;
         }
 
+        public Deal GetCurrentDeal()
+        {
+            return _xkomWebRepository.GetCurrentDeal();
+        }
+
         public Product GetCurrentDealProduct()
         {
             return _xkomWebRepository.GetCurrentDealProduct();

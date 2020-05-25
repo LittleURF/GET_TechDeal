@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GET_TechDeal.Api", "GET_Tec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GET_TechDeal.AzureFunctions", "GET_TechDeal.AzureFunctions\GET_TechDeal.AzureFunctions.csproj", "{F849A112-F947-4F4E-87BF-48186036E2F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GET_TechDeal.WebScraper", "GET_TechDeal.WebScraper\GET_TechDeal.WebScraper.csproj", "{8ED7BC9D-2D0A-4216-ADD2-18CCD76E051B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F849A112-F947-4F4E-87BF-48186036E2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F849A112-F947-4F4E-87BF-48186036E2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F849A112-F947-4F4E-87BF-48186036E2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED7BC9D-2D0A-4216-ADD2-18CCD76E051B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED7BC9D-2D0A-4216-ADD2-18CCD76E051B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED7BC9D-2D0A-4216-ADD2-18CCD76E051B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED7BC9D-2D0A-4216-ADD2-18CCD76E051B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

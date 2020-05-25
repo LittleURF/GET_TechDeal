@@ -1,6 +1,5 @@
 ﻿using GET_TechDeal.Core.Entities;
 using GET_TechDeal.Core.Interfaces;
-using GET_TechDeal.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;

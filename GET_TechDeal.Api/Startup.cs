@@ -16,6 +16,7 @@ using Microsoft.EntityFrameworkCore;
 using GET_TechDeal.Core.Services;
 using GET_TechDeal.Infrastructure.WebParsers;
 using GET_TechDeal.Core.Interfaces;
+using GET_TechDeal.Core.Data;
 
 namespace GET_TechDeal
 {

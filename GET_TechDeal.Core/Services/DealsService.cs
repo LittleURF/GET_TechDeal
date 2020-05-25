@@ -1,4 +1,5 @@
-﻿using GET_TechDeal.Core.Entities;
+﻿using GET_TechDeal.Core.Data;
+using GET_TechDeal.Core.Entities;
 using GET_TechDeal.Core.Interfaces;
 using System;
 using System.Collections.Generic;
